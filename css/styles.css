@@ -278,7 +278,7 @@ img {
 }
 
 .hero-title {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-30px);
 
   font-weight: 900;
