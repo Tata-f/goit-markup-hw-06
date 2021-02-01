@@ -20,6 +20,7 @@
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+  --font-style-normal: normal;
   --font-weight-400: 400;
   --font-weight-500: 500;
   --font-weight-700: 700;
@@ -52,7 +53,7 @@ body {
   font-size: var(--font-size-14);
   font-family: 'Roboto', sans-serif;
   font-weight: var(--font-weight-400);
-  font-style: normal;
+  font-style: var(--font-style-normal);
 }
 
 /* основной цвет текста #757575 */
@@ -64,7 +65,7 @@ body {
 /* утилиты */
 
 .list {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-0px);
   padding-left: 0;
   list-style: none;
@@ -221,7 +222,7 @@ img {
 /* стилизация заголовков */
 
 .features-list .title {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: 10px;
 
   font-weight: var(--font-weight-700);
@@ -232,7 +233,7 @@ img {
 }
 
 .section-title {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: 50px;
 
   font-weight: var(--font-weight-700);
@@ -262,14 +263,6 @@ img {
     url(../images/команда.jpg);
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.container {
-  width: 1200px;
-  padding-right: var(--padding-15px);
-  padding-left: var(--padding-15px);
-  margin-right: var(--margin-auto);
-  margin-left: var(--margin-auto);
 }
 
 .hero .container {
@@ -338,7 +331,7 @@ img {
 }
 
 .features p {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-0px);
 
   line-height: 1.7;
@@ -381,7 +374,7 @@ img {
   bottom: 25px;
   width: var(--width-height-100);
 
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-0px);
 
   font-weight: var(--font-weight-500);
@@ -418,7 +411,7 @@ img {
 }
 
 .names {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: 10px;
 
   font-weight: var(--font-weight-500);
@@ -429,7 +422,7 @@ img {
 }
 
 .professions {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: 16px;
 
   font-size: var(--font-size-16);
@@ -522,7 +515,7 @@ img {
 /* портфолио */
 
 .portfolio-section {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-0px);
   padding-top: var(--padding-94px);
   padding-bottom: var(--padding-94px);
@@ -574,7 +567,7 @@ li button:focus {
 
 .portfolio-section .cards li {
   width: 370px;
-  margin-right: 30px;
+  margin-right: var(--margin-30px);
   margin-bottom: var(--margin-30px);
   outline: 1px solid #eeeeee;
 }
@@ -641,7 +634,7 @@ li button:focus {
 }
 
 .portfolio-section .cards h2 {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: 4px;
 
   font-weight: var(--font-weight-700);
@@ -652,7 +645,7 @@ li button:focus {
 }
 
 .portfolio-section .cards p {
-  margin-bottom: var(--margin-0px);
+  margin-top: var(--margin-0px);
   margin-bottom: var(--margin-0px);
 
   font-size: var(--font-size-16);
@@ -675,6 +668,7 @@ li button:focus {
 .footer .container {
   display: var(--display-flex);
   align-items: baseline;
+  justify-content: space-between;
 }
 
 .footer-left {
@@ -692,9 +686,10 @@ li button:focus {
 
 .footer-right .title,
 .subscribe .title {
-  margin-bottom: var(--margin-0px);
+  margin-top: 0px;
   margin-bottom: 20px;
-
+  font-family: Roboto;
+  font-size: var(--font-size-14);
   font-weight: var(--font-weight-700);
   line-height: var(--line-height-1-1);
   letter-spacing: var(--letter-spacing-03em);
@@ -718,12 +713,11 @@ li button:focus {
 
 .footer .logo {
   display: var(--display-block);
-}
 
-.footer .logo {
   margin-bottom: 20px;
 
   font-family: Raleway;
+  font-style: var(--font-style-normal);
   font-weight: var(--font-weight-700);
   font-size: 26px;
   line-height: var(--line-height-1-2);
@@ -736,8 +730,8 @@ li button:focus {
 address {
   margin-bottom: 9px;
 
-  font-style: normal;
-  line-height: 1.7;
+  font-style: var(--font-style-normal);
+  line-height: 0.7;
   letter-spacing: var(--letter-spacing-03em);
   color: var(--secondary-text-color);
 }
@@ -1000,6 +994,10 @@ address {
   border: 1px solid var(--title-color);
   border-radius: 2px;
   cursor: var(--cursor-pointer);
+}
+
+.agreement .checkbox:focus + .label-checkbox::before {
+  border: 1px solid var(--accent-color);
 }
 
 .checkbox:checked + .label-checkbox::before {
